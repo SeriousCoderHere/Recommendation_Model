@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Visualization</title>
+    <!-- Include Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        Aspiration
+    </header>
+
+    <div id="sidebar">
+        <h3>Features</h3>
+        <ul>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Old</a></li>
+            <li><a href="#">SQL Projects</a></li>
+            <li><a href="#">Python Projects</a></li>
+            <li><a href="#">Anything</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="content-container">
+            <div class="marquee-container">
+                <marquee>
+                        <img src="https://imageio.forbes.com/blogs-images/forbestechcouncil/files/2019/01/canva-photo-editor-8-7.png?height=640&width=640&fit=bounds" alt="average workspace of an employee here">
+                        <img src="https://images.ctfassets.net/pdf29us7flmy/2ZtlOujWNf4ztl5wbRnTpC/4a394c414c6a2e3f68749802e5e4d042/GettyImages-689291632_optimized.jpg?w=720&q=100&fm=jpg" alt="working employee">
+                        <img src="https://images.unsplash.com/photo-1603969409447-ba86143a03f6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG1hbiUyMGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="working from home">
+                </marquee>
+            </div>
+
+            <div class="content">
+                <p>
+                    I am a student in school working very hard apart from my normal studies to make this project run. 
+                    If you have any suggestions, you can write in using the support button. 
+                    I want all of you to enjoy this website.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Creative Visualization 2024
+        <br>
+        <button class="time-button" id="timeButton">IST Time: Loading...</button>
+    </footer>
+
+    <a href="https://imgflip.com/i/94hwh7" class="support-button" target="_blank">Support</a>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const timeString = new Intl.DateTimeFormat('en-US', options).format(now);
+            document.getElementById('timeButton').textContent = `IST Time: ${timeString}`;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // Initial call to set the time immediately
+    </script>
+</body>
+</html>

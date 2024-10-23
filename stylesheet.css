@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #000000, #6a0dad);
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 3em;
+    letter-spacing: 5px;
+}
+
+/* Marquee Styles */
+.marquee-container {
+    margin: 30px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+marquee {
+    display: flex;
+    padding: 15px 0;
+}
+
+marquee img {
+    width: 200px;
+    height: 150px;
+    margin: 0 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Styles */
+.content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Styles */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sidebar h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+#sidebar ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Support Button Styles */
+.support-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: rgba(255, 140, 0, 0.7); /* Translucent orange */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; /* Ensure link styling isn't underlined */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.support-button:hover {
+    background-color: rgba(255, 25, 0, 0.7);
+}
+
+/* Footer Styles with Flexbox */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1em;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+/* Responsive time button */
+.time-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: rgba(30, 144, 255, 0.3); /* Transparent time box */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.time-button:hover {
+    background-color: rgba(0, 191, 255, 0.5);
+}
+
+/* Ensure sidebar doesn't overlap on small screens */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #sidebar ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .support-button {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Content container padding */
+.content-container {
+    padding-bottom: 100px;
+}
