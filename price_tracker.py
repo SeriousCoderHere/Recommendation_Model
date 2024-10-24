@@ -44,5 +44,5 @@ while True:
             lowest_price["lowest till now is"]=prices_list[-1]
     time.sleep(24600)
     count += 1
-pword="idkthispassword"
+pword="lorem ipsum"
 print(lowest_price)
